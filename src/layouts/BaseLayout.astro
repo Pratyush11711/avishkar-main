@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Avishkar AI — Hero Concept",
+  description = "AI-native uptime layer for critical infrastructure. Avishkar AI hero design concept."
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <script is:inline>document.documentElement.classList.add('js');if(new URLSearchParams(location.search).has('static'))document.documentElement.classList.add('static');</script>
+</head>
+<body>
+  <slot />
+</body>
+</html>
